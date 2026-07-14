@@ -186,3 +186,21 @@ x=10.0
 | ceil(x) | [x] | 最小的>=x的整数 |
 | floor(x) | [x] | 最大的<=x的整数 |
 
+### 阶乘
+
++ IPO处理：
+    - 输入计算阶乘的数
+    - 计算n阶乘
+    - 输出
++ 因为6!=6 * 5 * 4 * 3 * 2 * 1，这在计算机当中是一个名为“累积器”的算法模式。
++ 我们可以运用`range`来实现列表的定义，比如说以下：
+```python
+>>>print("This program calculates the factorial of numbers from a starting number to an ending number.")
+x=float(input("Please enter a starting number:"))
+y=float(input("Please enter an ending number:"))
+fact = 1
+for factor in range(int(x),int(y)+1):
+    fact = fact*factor
+print("The factorial of numbers from",int(x),"to",int(y),"is",fact)
+```
+以上程序就可以简单的实现从某数到某数的累计相乘。
